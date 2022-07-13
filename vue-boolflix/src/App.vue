@@ -26,9 +26,15 @@ export default {
       apiKEY:'22417c572e70c5c8b4a73abbcd09085a',
       //url inizialmente generico
       apiURL:'https://api.themoviedb.org/3/search/',
+      //urlIMG
+      imgAPI:'https://image.tmdb.org/t/p/',
       //array inizialmente vuoto
       //successivamente popolato alla chiamata
-      moviesArray:[ ],
+      //array film
+      moviesArray:[],
+      //array serie
+      serieTvArray:[],
+
     }
   },
   methods:{

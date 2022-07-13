@@ -4,8 +4,11 @@
           <h1>BOOLFLIX</h1>
       </div>
       <nav>
+          <!--imposto il v-model per ottenere il valore della input-->
           <input v-model="searchFilm" type="text">
-          <button  @click="filmSearch"> Search </button>
+          <!--imposto la funzione al click-->
+          <button  @click="filmSearch"
+                   > Search </button>
       </nav>
       <div class="user">
           <div  class="profilePic">
@@ -19,6 +22,7 @@ export default {
     name:'HeaderComponent',
     data(){
         return{
+            //variabile utilizzata per il valore della input
             searchFilm:''
         }
     },

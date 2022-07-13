@@ -27,7 +27,13 @@ export default {
 
 <style lang="scss" scoped>
 .list{
-    padding: 20px;
+   
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    padding: 30px;
+    height: 100vh;
+    width: 100%;
 }
 </style>
 
