@@ -1,23 +1,21 @@
 <template>
 <div class="list">
     <!--imposto il ciclo v-for con gli elementi passati tramite props-->
-    <div :key="movie.id"
-         v-for="movie in moviesArray ">
+    <div class="film e serie" :key="movie.id"
+         v-for="movie in filmSerieArray ">
          <!--nome componente :nome nel figlio="valore che voglio passare"-->
          <CardFilmComponent :movie="movie"/>
     </div>
 </div>
-  
 </template>
 
 <script>
 import CardFilmComponent from './CardFilmComponent.vue';
-
 export default {
     name:'FilmList',
     props:{
         //dichiaro la props
-        moviesArray:Array
+        filmSerieArray:Array
     },
     components:{
         CardFilmComponent,
@@ -27,7 +25,6 @@ export default {
 
 <style lang="scss" scoped>
 .list{
-   
     display: flex;
     flex-direction: row;
     overflow: scroll;

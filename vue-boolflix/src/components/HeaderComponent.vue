@@ -7,11 +7,13 @@
           <!--imposto il v-model per ottenere il valore della input-->
           <input v-model="searchFilm" type="text">
           <!--imposto la funzione al click-->
-          <button  @click="filmSearch"
-                   > Search </button>
+          <button  @click="filmSearch">
+            Search 
+          </button>
       </nav>
       <div class="user">
           <div  class="profilePic">
+              <img class="eyes" src="../assets/img/occhi.jpeg" alt="">
           </div>
       </div>
   </div>
@@ -41,24 +43,44 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
 h1{
     color: rgb(160, 18, 18);
+}
+input{
+    background-color: rgb(160, 18, 18);
+    border-radius:20px 0 0 20px ;
+    border: none;
+    padding: 5px;
+    color: white;
+    clear: inherit;
+}
+button{
+    background-color: rgb(160, 18, 18);
+    border: none;
+    border-radius: 0 20px 20px 0 ;
+    padding: 5px;
+    color: white;
 }
 .user{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 20px;
-    background-color: rgb(160, 18, 18);
+    width: 100px;
+    height: 100px;
     .profilePic{
         border-radius: 50%;
-        width: 10px;
-        height: 10px;
+        width: 70px;
+        height: 70px;
         background-color: white;
+        position: relative;
+        .eyes{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
     }
 }
-
+}
 </style>
 

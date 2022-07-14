@@ -3,7 +3,8 @@
     <!--riporto il emit-->
     <HeaderComponent @getInputFilm="getInput" />
     <!--riporto il componente con la props-->
-    <FilmList :moviesArray="moviesArray" />
+    <FilmList :filmSerieArray="filmSerieArray"
+               />
   </div>
 </template>
 
@@ -28,24 +29,35 @@ export default {
       apiURL:'https://api.themoviedb.org/3/search/',
       //urlIMG
       imgAPI:'https://image.tmdb.org/t/p/',
+      
+
       //array inizialmente vuoto
       //successivamente popolato alla chiamata
       //array film
-      moviesArray:[],
+      //moviesArray:[],
       //array serie
-      serieTvArray:[],
-
+      //serieTvArray:[],
+      //film&serie
+      filmSerieArray:[]
     }
   },
   methods:{
+    //Milletone 1
     //funzione per prendere il parametro dell'emit 
     getInput(searchFilm){
       //chiamata api con valori aggiornati
       axios.get(`${this.apiURL}movie?api_key=${this.apiKEY}&query=${searchFilm}`)
       .then((response)=>{
       //l'array inizialmente vuoto si popola alla chiamata
-      this.moviesArray=response.data.results;
-    })
+      this.filmSerieArray=response.data.results;
+      }),
+      //Millestone 2
+      //chiamata api con valori aggiornati
+      axios.get(`${this.apiURL}tv?api_key=${this.apiKEY}&query=${searchFilm}`)
+      .then((response)=>{
+      //l'array inizialmente vuoto si popola alla chiamata
+      this.filmSerieArray=response.data.results;
+      })
     }
   }
 }
