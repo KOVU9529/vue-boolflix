@@ -3,8 +3,7 @@
     <!--riporto il emit-->
     <HeaderComponent @getInputFilm="getInput" />
     <!--riporto il componente con la props-->
-    <FilmList :filmSerieArray="filmSerieArray"
-               />
+    <FilmList :filmSerieArray="filmSerieArray"/>
   </div>
 </template>
 

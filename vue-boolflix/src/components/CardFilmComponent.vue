@@ -15,7 +15,7 @@
             <h2>{{movie.name}}{{movie.title}}</h2>
           </div>
           <div>
-            <h2 class="red">Titolo</h2>
+            <h2 class="red">Titolo originale</h2>
             <h2>{{movie.original_name}}{{movie.original_title}}</h2>
           </div>
           <div>
@@ -44,7 +44,6 @@
           </div>
         </div>
         </div>
-       
     </div>
 </template>
 
@@ -57,7 +56,7 @@ export default {
     data(){
         return{
             //creo l'array per associare la selezione delle bandiere
-            weFlag:['it','en','fr','es'],
+            weFlag:['it','en','fr','es','de','sv','pt','nl','cs','vi','hu','sk','gu','zh','cn','ja','da','hi','ko','id','te','my'],
             //Creo apiURL per riportarmi il valore delle img generiche
             apiURL:'https://image.tmdb.org/t/p/',
             //imposto la varaibile numerica
