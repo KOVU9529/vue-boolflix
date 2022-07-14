@@ -8,7 +8,7 @@
           <input v-model="searchFilm" type="text">
           <!--imposto la funzione al click-->
           <button  @click="filmSearch">
-            Search 
+            BOOLFLIX 
           </button>
       </nav>
       <div class="user">
@@ -65,14 +65,15 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     .profilePic{
         border-radius: 50%;
         width: 70px;
         height: 70px;
         background-color: white;
         position: relative;
+       
         .eyes{
             position: absolute;
             width: 100%;

@@ -1,12 +1,13 @@
 <template>
 <!-- Creo la struttura della card -->
 <!-- Utilizzo  il nome della props -->
-  <div class="cardFilm">
+  <div class="cardFilmSerie">
       <div class="cardisplay">
             <div>
                 <!--Millestone 3 struttura creazione immagine=
                     urlGENERICO Immagini + dimensioni + specifico url img -->
-                <img class="img" :src="apiURL + 'w342'+ `${movie.backdrop_path}`" alt="">
+                <img v-if="movie.backdrop_path !== null" class="img" :src="apiURL + 'w342'+ `${movie.backdrop_path}`" alt="">
+                <img v-else  class="img" src="../assets/img/avviso.png" alt="">
             </div>
         <div class="information">
             <div >
@@ -73,7 +74,7 @@ export default {
 </script>
 
 <style lang="scss">
-.cardFilm{
+.cardFilmSerie{
     padding: 10px 0;
     position: relative;
     .flag{
@@ -85,6 +86,7 @@ export default {
     .cardisplay{
         opacity: 1;
         z-index: 3;
+        margin-left: 20px;
         .img{
             width: 400px;
             height: 700px;
