@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <!--riporto il emit-->
-    <HeaderComponent @getInputFilm="getInput" />
+    <HeaderComponent @getInputFilm="getInput"
+    :moments="moments" />
     <!--riporto il componente con la props-->
     <FilmList :filmSerieArray="filmSerieArray"/>
   </div>
@@ -37,7 +38,17 @@ export default {
       //array serie
       //serieTvArray:[],
       //film&serie
-      filmSerieArray:[]
+      filmSerieArray:[],
+      moments:[
+                {
+                    nameAutor:'George R.R. Martin',
+                    textSerie:'il drama fantasy è ambientato 172 anni prima dei sanguinosi fatti della serie originale e racconta gli eventi che hanno portato alla rovinosa caduta e alla fine del dominio di Casa Targaryen',
+                },
+                {
+                    nameAutor:'J. R. R. Tolkien',
+                    textSerie:'Migliaia di anni prima degli eventi raccontati ne Lo Hobbit e Il Signore degli Anelli, durante un periodo di relativa pace, nel corso della Seconda Era della Terra di Mezzo, si assiste alla forgiatura degli Anelli del Potere, all\'ascesa dell\'Oscuro Signore Sauron, alla caduta del regno insulare di Númenor e all\'ultima alleanza tra Elfi e Uomini',
+                }
+            ],
     }
   },
   methods:{
