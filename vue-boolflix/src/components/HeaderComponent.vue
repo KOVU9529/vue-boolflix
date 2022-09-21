@@ -124,7 +124,6 @@ button{
         background-size: cover;
         background-position:initial;
         overflow: scroll;
-        padding: 15px;
     }
 }
 </style>
